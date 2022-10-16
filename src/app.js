@@ -44,6 +44,9 @@ app.get('/credit',(req,res)=>{
     res.render('account',{account:accounts.credit});
 });*/
 
+app.use('/account',accountRoutes);
+app.use('/services',servicesRoutes);
+
 /*MOVE to SERVICES.Js in ROUTES DIR
 app.get('/transfer',(req,res)=>{
     res.render('transfer')
