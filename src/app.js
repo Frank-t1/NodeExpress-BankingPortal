@@ -30,6 +30,7 @@ app.get('/' ,(req,res)=>{
     res.render('index',{title:'Account Summary',accounts});
 });
 
+/*MOVE to ACCOUNTS.js in Routes dir
 app.get('/savings',(req,res)=>{
     res.render('account',{account:accounts.savings});
 });
@@ -38,8 +39,9 @@ app.get('/checking',(req,res)=>{
 });
 app.get('/credit',(req,res)=>{
     res.render('account',{account:accounts.credit});
-});
+});*/
 
+/*MOVE to SERVICES.Js in ROUTES DIR
 app.get('/transfer',(req,res)=>{
     res.render('transfer')
 });
@@ -64,7 +66,7 @@ app.post('/payment',(req,res)=>{
     // fs.writeFileSync(path.join(__dirname, 'json/accounts.json'),accountsJSON, 'utf-8');
     writeJSON();
     res.render('payment', {message:'Payment Successful', account:accounts.credit});
-});
+});*/
 
 app.get('/profile',(req,res)=>{
     res.render('profile',{user:users[0]});
