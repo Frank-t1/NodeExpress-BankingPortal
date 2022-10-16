@@ -50,8 +50,9 @@ app.post('/transfer',(req,res)=>{
 });
 
 app.get('/payment',(req,res)=>{
-    res.render('account',{account:accounts.credit});
+    res.render('payment',{account:accounts.credit});
 });
+
 app.post('/payment',(req,res)=>{
     accounts.credit.balance-=req.body.amount;
     accounts.credit.available+=parseInt(req.body.amount,10);
